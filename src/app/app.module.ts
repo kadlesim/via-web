@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -8,6 +9,36 @@ import { TeamComponent } from './team/team.component';
 import { BlogComponent } from './blog/blog.component';
 import { ResultsComponent } from './results/results.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
+import { NotfoundComponent } from './notfound/notfound.component';
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: HomepageComponent
+  },
+  {
+    path: 'home',
+    component: HomepageComponent
+  },
+  {
+    path: 'events',
+    component: EventsComponent
+  },
+  {
+    path: 'team',
+    component: TeamComponent
+  },
+  {
+    path: 'blog',
+    component: BlogComponent
+  },
+  {
+    path: 'results',
+    component: ResultsComponent
+  },
+  { path: '**', component: NotfoundComponent }
+];
 
 @NgModule({
   declarations: [
@@ -16,11 +47,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EventsComponent,
     TeamComponent,
     BlogComponent,
-    ResultsComponent
+    ResultsComponent,
+    NotfoundComponent
   ],
   imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      // { enableTracing: true } // <-- debugging purposes only
+    ),
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
