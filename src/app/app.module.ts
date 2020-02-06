@@ -7,6 +7,7 @@ import { EventsComponent } from './events/events.component';
 import { TeamComponent } from './team/team.component';
 import { BlogComponent } from './blog/blog.component';
 import { ResultsComponent } from './results/results.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ResultsComponent } from './results/results.component';
     ResultsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
