@@ -32,7 +32,8 @@ export class EventsComponent implements OnInit {
     console.log('log url >> ' + this.url); // endTime<' + endTime + '
     // console.log();
 
-    return this.http.get(this.url);
+    // return this.http.get(this.url);
+    return this.http.get('http://127.0.0.1:10010/events');
   }
 
 }
