@@ -1,3 +1,39 @@
 main {
   background-color: rgba(0,0,0,0.2);
 }
+
+header {
+  background-color: rgba(0,0,0,0.2);
+  display: inline-flex;
+  width: 100vw;
+  flex-flow: row;
+  margin: 1vh 0 0 0;
+}
+
+svg {
+  height: 10vh;
+}
+nav {
+  margin-top: 2.5vh;
+  text-align: end;
+}
+ul {
+  list-style: none;
+  display: inline-flex;
+}
+
+li {
+  min-width: 10vw;
+  text-align: center;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+a.active {
+  text-decoration: grey;
+}
