@@ -1,6 +1,9 @@
 section{
   background-image: url("../../assets/fotky/backgroung004.jpg");
   background-size: auto;
+  display: grid;
+  color: white;
+  font-weight: lighter;
 }
 a {
   text-decoration: none;
@@ -21,4 +24,15 @@ a {
 }
 .post-text{
   text-align: justify;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  padding-bottom: 4vh;
+}
+
+h2 {
+  margin-left: 2vw;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
 }

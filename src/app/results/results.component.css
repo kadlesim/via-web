@@ -1,4 +1,12 @@
 #page-main-section{
   background-image: url("../../assets/fotky/backgroung004.jpg");
-  background-size: cover;
+  background-size: auto;
+
+  display: grid;
+  color: white;
+  font-weight: lighter;
+}
+
+ul{
+  list-style: none;
 }
