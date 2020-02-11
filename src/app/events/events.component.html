@@ -16,7 +16,7 @@
       <td>{{event.startTime | date:'dd.MM.yyyy, '}}<b>{{event.startTime | date:'HH:mm'}}</b></td>
       <td>{{event.caption}}</td>
       <td>{{event.place}}</td>
-      <td><a (click)="goToUrl(event.link)">link</a></td>
+      <td><a *ngIf="event.link != ''" (click)="goToUrl(event.link)">link</a></td>
     </tr>
     </tbody>
   </table>

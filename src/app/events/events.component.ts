@@ -14,18 +14,14 @@ import {EventsService} from './events.service';
 })
 export class EventsComponent implements OnInit {
 
-  url = 'https://pd.tymy.cz/api/events?login=simon&password=605323511';
   events: any;
   data: any;
-  eventsLoaded: boolean;
 
   constructor(private eventService: EventsService) { }
 
   ngOnInit() {
     this.eventService.getEvents()
-      .subscribe(data => this.events = {
-        data: data.data
-      }.data);
+      .subscribe(data => this.events = data);
     console.log('showEvents');
   }
 

@@ -7,6 +7,7 @@ header {
   display: inline-flex;
   width: 100%;
   flex-flow: row;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.5);
 }
 
 svg {
@@ -15,7 +16,7 @@ svg {
 }
 nav {
   margin-top: 2.5vh;
-  text-align: end;
+  text-align: center;
 }
 ul {
   list-style: none;
@@ -37,6 +38,16 @@ ul {
 /*a.active {*/
 /*  color: red;*/
 /*}*/
+
+#menu-container {
+  width: 100%;
+  padding-right: 3vw;
+}
+
+li {
+  width: 6vw;
+}
+
 li > a{
   text-align: center;
   text-decoration: none;

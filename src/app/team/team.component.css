@@ -74,17 +74,17 @@
 }
 
 #players-list > div > div{
-  float: left;
-  width: 20vw;
-  height: 25vh;
-  border: solid white 1px;
-  text-align: center;
-  margin: 5px;
-  letter-spacing: .1rem;
-  min-width: 200px;
-  min-height: 250px;
-  max-width: 250px;
-  background-color: rgba(255,255,255,0.2);
+  /*float: left;*/
+  /*width: 20vw;*/
+  /*height: 25vh;*/
+  /*border: solid white 1px;*/
+  /*text-align: center;*/
+  /*margin: 5px;*/
+  /*letter-spacing: .1rem;*/
+  /*min-width: 200px;*/
+  /*min-height: 250px;*/
+  /*max-width: 250px;*/
+  /*background-color: rgba(255,255,255,0.2);*/
 }
 
 .img-div{
@@ -93,4 +93,18 @@
 
 .img-div img {
   height: 15vh;
+}
+
+.mix, .open, .women {
+  float: left;
+  width: 20vw;
+  height: 25vh;
+  border: solid white 1px;
+  text-align: center;
+  margin: 1.5vw;
+  letter-spacing: .1rem;
+  min-width: 200px;
+  min-height: 250px;
+  max-width: 250px;
+  background-color: rgba(255,255,255,0.2);
 }

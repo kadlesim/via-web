@@ -39,9 +39,7 @@ export class TeamComponent implements OnInit {
     this.datamActive = [];
     this.teamService.getAllPlayers()
       .subscribe(data => {
-        this.players = {
-          data: data.data
-        }.data;
+        this.players = data;
         for (const player of this.players) {
           if (player.gender === 'FEMALE') {
             this.dataw.push(player);
