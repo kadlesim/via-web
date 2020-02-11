@@ -1,0 +1,24 @@
+section{
+  background-image: url("../../assets/fotky/backgroung004.jpg");
+  background-size: auto;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.post-img {
+  width: 90%;
+  margin-bottom: 1vh;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.post {
+  margin-left: 17vw;
+  margin-right: 17vw;
+  background-color: rgba(0,0,0,0.3);
+}
+.post-text{
+  text-align: justify;
+}

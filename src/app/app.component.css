@@ -7,7 +7,6 @@ header {
   display: inline-flex;
   width: 100vw;
   flex-flow: row;
-  margin: 1vh 0 0 0;
 }
 
 svg {

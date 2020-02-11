@@ -1,6 +1,7 @@
 import {Component, Injectable, OnInit} from '@angular/core';
 import {DatePipe} from '@angular/common';
 import {HttpClient} from '@angular/common/http';
+import {EventsService} from './events.service';
 
 @Component({
   selector: 'app-events',
@@ -14,26 +15,30 @@ import {HttpClient} from '@angular/common/http';
 export class EventsComponent implements OnInit {
 
   url = 'https://pd.tymy.cz/api/events?login=simon&password=605323511';
+  events: any;
+  data: any;
+  eventsLoaded: boolean;
 
-  constructor(private http: HttpClient) { }
+  constructor(private eventService: EventsService) { }
 
   ngOnInit() {
-    this.getEvents().subscribe(data => console.log(data));
+    this.eventService.getEvents()
+      .subscribe(data => this.events = {
+        data: data.data
+      }.data);
+    console.log('showEvents');
   }
 
-  getEvents(): any {
-    // const endTime = new Date().getFullYear() + '' + new Date().getMonth() + '' + new Date().getDate();
-    const datePipe = new DatePipe('en-UK');
-    const endTime = datePipe.transform(Date.now(), 'yyyyMMdd');
-    console.log(endTime); /*Md5.hashStr("sem dat moje heslo")*/
-    // tslint:disable-next-line:max-line-length
-    this.url = 'https://pd.tymy.cz/api/events?login=simon&password=' + 'e0fcb7fc608c79e69fdc99ff7050aa72&filter=endTime>' + endTime +  '&order=startTime&limit=10';
-    // this.url = '../../assets/eventData.json'; //dummy data
-    console.log('log url >> ' + this.url); // endTime<' + endTime + '
-    // console.log();
-
-    return this.http.get(this.url);
-    // return this.http.get('http://127.0.0.1:10010/events');//todo
+  goToUrl(url: any): void {
+    // document.location.href = url;
+    window.open(url);
   }
+
+  showEvents() {
+    console.log(this.events);
+    return true;
+  }
+
+
 
 }

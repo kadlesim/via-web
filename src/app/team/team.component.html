@@ -1,1 +1,64 @@
 <p>team works!</p>
+<section id="page-main-section">
+  <h1 id="players-heading">TÝM</h1>
+
+  <article id="players-article">
+    <div id="category-btn">
+      <div id="mix-btn"><h1 (click)="showMix()">MIX</h1></div>
+      <div id="open-btn"><h1 (click)="showOpen()">OPEN</h1></div>
+      <div id="women-btn"><h1 (click)="showWomen()">WOMEN</h1></div>
+    </div>
+    <div id="players-list">
+      <!--ukaze vsechny hrace - prvni nacteni-->
+<!--      <div *ngIf="showAll()">-->
+<!--        <div class="player" *ngFor="let player of players">-->
+<!--          <div class="player" *ngIf="player.gender === 'FEMALE'">-->
+<!--            &lt;!&ndash;            <div class="img-div" > <img class="player-img" src="http://pd.tymy.cz{{player.pictureUrl}}"></div>&ndash;&gt;-->
+<!--            <div class="img-div" > <img class="player-img" src="../../assets/female.png"></div>-->
+<!--            <div>{{player.callName}} <br> #{{player.jerseyNumber}}</div>-->
+<!--          </div>-->
+<!--          <div class="player" *ngIf="player.gender === 'MALE'">-->
+<!--            &lt;!&ndash;            <div class="img-div" > <img class="player-img" src="http://pd.tymy.cz{{player.pictureUrl}}"></div>&ndash;&gt;-->
+<!--            <div class="img-div" > <img class="player-img" src="../../assets/male.png"></div>-->
+<!--            <div>{{player.callName}} <br> #{{player.jerseyNumber}}</div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+      <!--ukaze vsechny hrace po kliknuti na tlacitko MIX-->
+      <div *ngIf="mix" >
+        <div class="player" *ngFor="let player of datamActive" class="mix">
+          <div class="player" *ngIf="player.gender === 'FEMALE'">
+            <!--            <div class="img-div" > <img class="player-img" src="http://pd.tymy.cz{{player.pictureUrl}}"></div>-->
+            <div class="img-div" > <img class="player-img" src="../../assets/female.png"></div>
+            <div>{{player.callName}} <br> #{{player.jerseyNumber}}</div>
+          </div>
+          <div class="player" *ngIf="player.gender === 'MALE'">
+            <!--            <div class="img-div" > <img class="player-img" src="http://pd.tymy.cz{{player.pictureUrl}}"></div>-->
+            <div class="img-div" > <img class="player-img" src="../../assets/male.png"></div>
+            <div>{{player.callName}} <br> #{{player.jerseyNumber}}</div>
+          </div>
+        </div>
+      </div>
+      <!--ukaze vsechny zeny - resp vsechny co maji gender=="female"-->
+      <div *ngIf="women" >
+        <div *ngFor="let player of datawActive" class="women">
+          <div class="player" *ngIf="player.gender === 'FEMALE'">
+<!--            <div class="img-div" > <img class="player-img" src="http://pd.tymy.cz{{player.pictureUrl}}"></div>-->
+            <div class="img-div" > <img class="player-img" src="../../assets/female.png"></div>
+            <div>{{player.callName}} <br> #{{player.jerseyNumber}}</div>
+          </div>
+        </div>
+      </div>
+      <!--ukaze vsechny muze - resp vsechny co maji gender=="male"-->
+      <div *ngIf="open" >
+        <div *ngFor="let player of dataoActive" class="open">
+          <div class="player" *ngIf="player.gender === 'MALE'">
+<!--            <div class="img-div" > <img class="player-img" src="http://pd.tymy.cz{{player.pictureUrl}}"></div>-->
+            <div class="img-div" > <img class="player-img" src="../../assets/male.png"></div>
+            <div>{{player.callName}} <br> #{{player.jerseyNumber}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

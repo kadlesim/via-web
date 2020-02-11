@@ -33,37 +33,42 @@ export class ResultsComponent implements OnInit {
       }.data);
     this.resultService.getSezona08()
       .subscribe(data => this.sezona08 = {
-        data: data['data']
+        data: data.data
       }.data);
     this.resultService.getSezona09()
       .subscribe(data => this.sezona09 = {
-        data: data['data']
+        data: data.data
       }.data);
     this.resultService.getSezona10()
       .subscribe(data => this.sezona10 = {
-        data: data['data']
+        data: data.data
       }.data);
     this.resultService.getSezona11()
       .subscribe(data => this.sezona11 = {
-        data: data['data']
+        data: data.data
       }.data);
     this.resultService.getSezona12()
       .subscribe(data => this.sezona12 = {
-        data: data['data']
+        data: data.data
       }.data);
     this.resultService.getSezona13()
       .subscribe(data => this.sezona13 = {
-        data: data['data']
+        data: data.data
       }.data);
     this.resultService.getSezona14()
       .subscribe(data => this.sezona14 = {
-        data: data['data']
+        data: data.data
       }.data);
     this.resultService.getSezona15()
       .subscribe(data => this.sezona15 = {
-        data: data['data']
+        data: data.data
       }.data);
     console.log('showPosts');
+  }
+
+  showHistory() {
+    // console.log(this.posts);
+    return true;
   }
 
 }

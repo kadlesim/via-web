@@ -1,0 +1,64 @@
+#page-main-section{
+  background-image: url("../../assets/fotky/backgroung004.jpg");
+  background-size: cover;
+  /*background-color: red;*/
+  display: grid;
+  grid-template-areas:
+    'heading'
+    'aboutus'
+    'aboutultimate';
+  color: white;
+  font-weight: lighter;
+}
+
+#page-main-section > div, article{
+  margin-left: 16vw;
+  margin-right: 15vw;
+}
+
+article{
+  text-align: justify;
+}
+
+#heading{
+  grid-area: heading;
+  margin-top: 10vh;
+  text-align: center;
+  text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+  letter-spacing: .2rem;
+}
+
+#heading > h1 {
+  font-weight: bold;
+  font-size: 4.5em;
+  margin-bottom: 3vh;
+  margin-top: 4vh;
+}
+#heading > h3 {
+  font-style: italic;
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+article > div {
+  letter-spacing: .1rem;
+  font-weight: lighter;
+  font-size: .95em;
+}
+article > h1 {
+  border-bottom: solid red 2px;
+  text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 2em;
+}
+#about-us{
+  grid-area: aboutus;
+  margin-top: 7vh;
+  margin-bottom: 3vh;
+}
+
+#about-ultimate{
+  grid-area: aboutultimate;
+  margin-top: 7vh;
+  margin-bottom: 18vh;
+}
