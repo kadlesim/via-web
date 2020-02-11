@@ -11,8 +11,10 @@ header {
 }
 
 svg {
-  height: 10vh;
+  height: 8vh;
   fill: white;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
 }
 nav {
   margin-top: 2.5vh;

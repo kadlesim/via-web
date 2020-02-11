@@ -25,7 +25,7 @@
 <!--      </div>-->
       <!--ukaze vsechny hrace po kliknuti na tlacitko MIX-->
       <div *ngIf="mix" >
-        <div class="player" *ngFor="let player of datamActive" class="mix">
+        <div *ngFor="let player of datamActive" class="mix">
           <div class="player" *ngIf="player.gender === 'FEMALE'">
             <!--            <div class="img-div" > <img class="player-img" src="http://pd.tymy.cz{{player.pictureUrl}}"></div>-->
             <div class="img-div" > <img class="player-img" src="../../assets/female.png"></div>

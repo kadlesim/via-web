@@ -1,0 +1,14 @@
+section {
+  background-color: rgba(255, 255, 255, 0.1);;
+  color: white;
+  padding: 5vh 30% 7vh 33%;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+div{
+  margin-bottom: 2vh;
+  text-align: justify;
+}

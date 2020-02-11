@@ -11,6 +11,7 @@ import { ResultsComponent } from './results/results.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { XkcdComponent } from './xkcd/xkcd.component';
 
 const appRoutes: Routes = [
   {
@@ -36,6 +37,9 @@ const appRoutes: Routes = [
   {
     path: 'results',
     component: ResultsComponent
+  },{
+    path: 'xkcd',
+    component: XkcdComponent
   },
   { path: '**', component: NotfoundComponent }
 ];
@@ -48,7 +52,8 @@ const appRoutes: Routes = [
     TeamComponent,
     BlogComponent,
     ResultsComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    XkcdComponent
   ],
   imports: [
     RouterModule.forRoot(
